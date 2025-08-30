@@ -1,0 +1,302 @@
+/* 
+ * 大雄视频平台 - 设计系统变量
+ * 基于 DESIGN_SPEC.md 文档规范
+ * Version: 1.0
+ */
+
+:root {
+  /* ============ 品牌色彩系统 ============ */
+  
+  /* 主色彩 - 大雄蓝 */
+  --primary-color: #1890ff;
+  --primary-hover: #40a9ff;
+  --primary-active: #096dd9;
+  --primary-disabled: #bae7ff;
+  --primary-gradient: linear-gradient(135deg, #1890ff 0%, #722ed1 100%);
+
+  /* VIP 会员专用色 */
+  --vip-color: #722ed1;
+  --vip-hover: #9254de;
+  --vip-active: #531dab;
+  --vip-gradient: linear-gradient(135deg, #722ed1 0%, #eb2f96 100%);
+
+  /* 直播专用色 */
+  --live-color: #ff4d4f;
+  --live-hover: #ff7875;
+  --live-active: #d9363e;
+  --live-gradient: linear-gradient(135deg, #ff4d4f 0%, #ff7a45 100%);
+
+  /* 功能状态色彩 */
+  --success-color: #52c41a;
+  --success-hover: #73d13d;
+  --success-active: #389e0d;
+  
+  --warning-color: #faad14;
+  --warning-hover: #ffc53d;
+  --warning-active: #d48806;
+  
+  --error-color: #ff4d4f;
+  --error-hover: #ff7875;
+  --error-active: #d9363e;
+  
+  --info-color: #1890ff;
+  --info-hover: #40a9ff;
+  --info-active: #096dd9;
+
+  /* ============ 中性色彩系统 ============ */
+  
+  /* 文字色彩 */
+  --text-primary: #262626;        /* 主要文字 85% */
+  --text-secondary: #595959;      /* 次要文字 65% */
+  --text-tertiary: #8c8c8c;       /* 辅助文字 45% */
+  --text-disabled: #bfbfbf;       /* 禁用文字 25% */
+  --text-inverse: #ffffff;        /* 反色文字 */
+
+  /* 背景色彩 */
+  --background-primary: #ffffff;    /* 主背景 */
+  --background-secondary: #fafafa;  /* 次背景 */
+  --background-tertiary: #f5f5f5;   /* 三级背景 */
+  --background-dark: #141414;       /* 深色背景 */
+  --background-overlay: rgba(0, 0, 0, 0.45); /* 遮罩背景 */
+
+  /* 边框色彩 */
+  --border-color: #d9d9d9;          /* 常规边框 */
+  --border-light: #f0f0f0;          /* 浅色边框 */
+  --border-dark: #434343;           /* 深色边框 */
+
+  /* ============ 弹幕专用色彩 ============ */
+  
+  --danmaku-white: #ffffff;
+  --danmaku-red: #ff6b6b;
+  --danmaku-orange: #ff9f43;
+  --danmaku-yellow: #ffd93d;
+  --danmaku-green: #6bcf7f;
+  --danmaku-cyan: #4ecdc4;
+  --danmaku-blue: #45b7d1;
+  --danmaku-purple: #a55eea;
+
+  /* ============ 字体系统 ============ */
+  
+  /* 字体族 */
+  --font-family-zh: 'PingFang SC', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', sans-serif;
+  --font-family-en: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-family-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  --font-family: var(--font-family-en), var(--font-family-zh);
+
+  /* 字号系统 */
+  --font-size-xs: 10px;            /* 超小字号 */
+  --font-size-sm: 12px;            /* 小号正文 */
+  --font-size-base: 14px;          /* 基准正文 */
+  --font-size-lg: 16px;            /* 大号正文 */
+  --font-size-h4: 18px;            /* 四级标题 */
+  --font-size-h3: 20px;            /* 三级标题 */
+  --font-size-h2: 24px;            /* 二级标题 */
+  --font-size-h1: 32px;            /* 一级标题 */
+  --font-size-display: 48px;       /* 展示标题 */
+  --font-size-caption: 12px;       /* 说明文字 */
+
+  /* 行高系统 */
+  --line-height-tight: 1.2;       /* 紧密行高 - 标题 */
+  --line-height-base: 1.5;        /* 基准行高 - 正文 */
+  --line-height-loose: 1.8;       /* 宽松行高 - 长文本 */
+
+  /* 字重系统 */
+  --font-weight-light: 300;       /* 细体 */
+  --font-weight-normal: 400;      /* 常规 */
+  --font-weight-medium: 500;      /* 中等 */
+  --font-weight-semibold: 600;    /* 半粗体 */
+  --font-weight-bold: 700;        /* 粗体 */
+
+  /* ============ 间距系统 (8px 网格) ============ */
+  
+  --space-xs: 4px;                /* 超小间距 */
+  --space-sm: 8px;                /* 小间距 */
+  --space-md: 16px;               /* 中等间距 */
+  --space-lg: 24px;               /* 大间距 */
+  --space-xl: 32px;               /* 超大间距 */
+  --space-xxl: 48px;              /* 巨大间距 */
+  --space-xxxl: 64px;             /* 最大间距 */
+
+  /* 组件内边距 */
+  --padding-xs: 4px 8px;          /* 小按钮 */
+  --padding-sm: 8px 16px;         /* 常规按钮 */
+  --padding-md: 12px 20px;        /* 大按钮 */
+  --padding-lg: 16px 24px;        /* 超大按钮 */
+
+  /* ============ 容器尺寸 ============ */
+  
+  --container-xs: 480px;          /* 超小容器 */
+  --container-sm: 576px;          /* 小容器 */
+  --container-md: 768px;          /* 中等容器 */
+  --container-lg: 992px;          /* 大容器 */
+  --container-xl: 1200px;         /* 超大容器 */
+  --container-xxl: 1600px;        /* 巨大容器 */
+
+  /* 内容最大宽度 */
+  --max-width-content: 1200px;    /* 主要内容区域 */
+  --max-width-reading: 800px;     /* 阅读最佳宽度 */
+
+  /* ============ 圆角系统 ============ */
+  
+  --border-radius-xs: 2px;        /* 超小圆角 */
+  --border-radius-sm: 4px;        /* 小圆角 - 按钮、输入框 */
+  --border-radius-base: 8px;      /* 基础圆角 - 卡片 */
+  --border-radius-lg: 12px;       /* 大圆角 - 大卡片 */
+  --border-radius-xl: 16px;       /* 超大圆角 - 模态框 */
+  --border-radius-full: 50%;      /* 圆形 - 头像、图标 */
+
+  /* ============ 阴影系统 ============ */
+  
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.03), 0 1px 6px rgba(0, 0, 0, 0.03);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-base: 0 2px 4px rgba(0, 0, 0, 0.03), 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 8px 16px rgba(0, 0, 0, 0.06), 0 16px 48px rgba(0, 0, 0, 0.16);
+
+  /* 特殊阴影 */
+  --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-colored: 0 4px 12px rgba(24, 144, 255, 0.15);
+  --shadow-vip: 0 4px 12px rgba(114, 46, 209, 0.15);
+  --shadow-live: 0 4px 12px rgba(255, 77, 79, 0.15);
+
+  /* ============ 动画系统 ============ */
+  
+  /* 动画时长 */
+  --duration-fast: 100ms;         /* 快速动画 - 按钮反馈 */
+  --duration-base: 200ms;         /* 基础动画 - 悬停效果 */
+  --duration-slow: 300ms;         /* 慢速动画 - 页面转场 */
+  --duration-slower: 500ms;       /* 更慢动画 - 复杂转场 */
+
+  /* 动画曲线 */
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* ============ Z-Index 层级 ============ */
+  
+  --z-dropdown: 1050;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+
+  /* ============ 响应式断点 ============ */
+  
+  --breakpoint-xs: 0px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1600px;
+
+  /* ============ 视频播放器相关 ============ */
+  
+  --video-aspect-ratio: 16/9;     /* 16:9 宽高比 */
+  --video-control-height: 60px;   /* 控制栏高度 */
+  --danmaku-speed: 8s;            /* 弹幕移动时长 */
+  
+  /* ============ 组件特定变量 ============ */
+  
+  /* 导航栏 */
+  --header-height: 60px;
+  --header-height-mobile: 56px;
+  
+  /* 侧边栏 */
+  --sidebar-width: 240px;
+  --sidebar-width-collapsed: 80px;
+  
+  /* 底部导航栏（移动端） */
+  --bottom-nav-height: 60px;
+  
+  /* 视频卡片 */
+  --video-card-aspect-ratio: 16/9;
+  --video-card-border-radius: var(--border-radius-lg);
+  
+  /* 按钮最小尺寸 */
+  --btn-height-sm: 24px;
+  --btn-height-base: 32px;
+  --btn-height-lg: 40px;
+}
+
+/* ============ 深色模式支持 ============ */
+
+/* 手动切换深色模式时的样式 */
+:root[data-theme="dark"],
+html.dark {
+  --text-primary: rgba(255, 255, 255, 0.85);
+  --text-secondary: rgba(255, 255, 255, 0.65);
+  --text-tertiary: rgba(255, 255, 255, 0.45);
+  --text-disabled: rgba(255, 255, 255, 0.25);
+  
+  --background-primary: #141414;
+  --background-secondary: #1f1f1f;
+  --background-tertiary: #262626;
+  --background-overlay: rgba(0, 0, 0, 0.65);
+  
+  --border-color: #434343;
+  --border-light: #303030;
+  --border-dark: #d9d9d9;
+}
+
+/* 自动跟随系统深色模式 */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not(.light) {
+    --text-primary: rgba(255, 255, 255, 0.85);
+    --text-secondary: rgba(255, 255, 255, 0.65);
+    --text-tertiary: rgba(255, 255, 255, 0.45);
+    --text-disabled: rgba(255, 255, 255, 0.25);
+    
+    --background-primary: #141414;
+    --background-secondary: #1f1f1f;
+    --background-tertiary: #262626;
+    --background-overlay: rgba(0, 0, 0, 0.65);
+    
+    --border-color: #434343;
+    --border-light: #303030;
+    --border-dark: #d9d9d9;
+  }
+}
+
+/* 强制浅色模式 */
+:root[data-theme="light"],
+html.light {
+  --text-primary: #262626;
+  --text-secondary: #595959;
+  --text-tertiary: #8c8c8c;
+  --text-disabled: #bfbfbf;
+  
+  --background-primary: #ffffff;
+  --background-secondary: #fafafa;
+  --background-tertiary: #f5f5f5;
+  --background-overlay: rgba(0, 0, 0, 0.45);
+  
+  --border-color: #d9d9d9;
+  --border-light: #f0f0f0;
+  --border-dark: #434343;
+}
+
+/* ============ 高对比度模式支持 ============ */
+@media (prefers-contrast: high) {
+  :root {
+    --shadow-xs: none;
+    --shadow-sm: none;
+    --shadow-base: 0 0 0 1px var(--border-color);
+    --shadow-lg: 0 0 0 2px var(--border-color);
+    --shadow-xl: 0 0 0 3px var(--border-color);
+  }
+}
+
+/* ============ 动画减少模式支持 ============ */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+    --duration-slow: 0ms;
+    --duration-slower: 0ms;
+    --danmaku-speed: 0s;
+  }
+}
